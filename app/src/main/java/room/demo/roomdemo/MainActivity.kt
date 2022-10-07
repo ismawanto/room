@@ -11,16 +11,17 @@ import com.demo.roomdemo.R
 import room.demo.roomdemo.db.UserEntity
 import kotlinx.android.synthetic.main.activity_main.*
 
+//Deklarasi kelas dan memperluas
 class MainActivity : AppCompatActivity(), RecyclerViewAdapter.RowClickListener {
 
     lateinit var recyclerViewAdapter: RecyclerViewAdapter
     lateinit var viewModel: MainActivityViewModel
-
+    
+// Untuk mengganti metode kelas
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
+         //deklarasi variabel lokal (bisa berupa val atau var)
 
         recyclerView.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.RowClickListener {
             recyclerViewAdapter.notifyDataSetChanged()
         })
 
-
+// Pada bagian ini untuk memberikan fungsi pada button
         saveButton.setOnClickListener {
             val name  = nameInput.text.toString()
             val email  = emailInput.text.toString()
